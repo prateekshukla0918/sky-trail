@@ -1,0 +1,214 @@
+.blog-list-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .blog-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  /* Hero Section */
+  .blog-list-hero {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    background-image: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+  }
+  
+  /* Filters Section */
+  .blog-filters {
+    margin-bottom: 2rem;
+  }
+  
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .region-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .region-filter label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .region-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    min-width: 180px;
+    cursor: pointer;
+  }
+  
+  .region-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .search-results-info {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-md);
+    border-left: 3px solid var(--primary-color);
+  }
+  
+  .search-results-info p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  /* Blog Grid */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Blog Loading State */
+  .blog-list-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .blog-list-loading p {
+    color: var(--text-light);
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Blog Error State */
+  .blog-list-error {
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    margin: 2rem 0;
+    border: 1px solid var(--error-color);
+  }
+  
+  .error-icon {
+    font-size: 3rem;
+    color: var(--error-color);
+    margin-bottom: 1rem;
+  }
+  
+  .blog-list-error h2 {
+    color: var(--error-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-list-error p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  /* Empty State */
+  .blog-list-empty {
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    margin: 2rem 0;
+  }
+  
+  .blog-list-empty h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-list-empty p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-list-hero {
+      padding: 2rem 1.5rem;
+    }
+    
+    .filter-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+      font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }

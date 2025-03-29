@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'wouter';
+import { BlogProvider } from './context/BlogContext';
+import BlogList from './pages/BlogList';
+import BlogDetail from './pages/BlogDetail';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BlogProvider>
+      <Switch>
+        <Route path="/" component={BlogList} />
+        <Route path="/blog/:id" component={BlogDetail} />
+        <Route component={NotFound} />
+      </Switch>
+    </BlogProvider>
   );
 }
 

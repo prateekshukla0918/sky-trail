@@ -1,0 +1,109 @@
+.country-info {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .country-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .country-flag {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .country-name-container {
+    flex-grow: 1;
+  }
+  
+  .country-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+  }
+  
+  .country-official-name {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  
+  .country-details {
+    padding: 1.5rem;
+  }
+  
+  .country-detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detail-label {
+    min-width: 100px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.9rem;
+  }
+  
+  .detail-value {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .country-info-loading {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .country-info-error {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--error-color);
+  }
+  
+  .error-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .country-info-empty {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+  }
