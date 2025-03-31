@@ -58,15 +58,15 @@ const Footer = () => {
           <div className="footer-contact-info">
             <div className="contact-item">
               <span className="contact-icon">✉️</span>
-              <span>info@travelog.com</span>
+              <span>prateekshukla@gmail.com</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📱</span>
-              <span>+1 (555) 123-4567</span>
+              <span>+91 9925550708</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <span>123 Travel Street, World</span>
+              <span>Kishora road, Sonipat</span>
             </div>
           </div>
           

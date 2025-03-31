@@ -56,4 +56,6 @@ const BlogCard = ({ blog }) => {
       </div>
     </article>
   );
-}
+};
+
+export default BlogCard;
